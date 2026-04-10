@@ -1,0 +1,100 @@
+# --- PYTHON & BUILD ARTIFACTS ---
+__pycache__/
+*.py[cod]
+*$py.class
+.ruff_cache/
+*.spec
+*.egg-info/
+dist/
+build/
+
+# --- VIRTUAL ENVIRONMENT ---
+.venv/
+venv/
+env/
+
+# --- SECURITY (ZERO TRUST) ---
+# Never commit keys or secrets
+.env
+**/*.env
+.streamlit/secrets.toml
+
+# --- IDE & OS ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# --- STREAMLIT ---
+# Ignore local runtime files, but KEEP the theme config
+.streamlit/*
+!.streamlit/config.toml
+
+# ====================================
+#  TITAN DATA ARCHITECTURE (CRITICAL)
+# ====================================
+
+# 1. RAW INTELLIGENCE (PDFs)
+# We do not commit copyrighted exam papers or large binaries
+sigma_data/raw_pdfs/*
+!sigma_data/raw_pdfs/.gitkeep
+
+# 2. ATOMIZED ASSETS (Cropped Images)
+# These are generated via script. Do not commit thousands of images.
+sigma_data/atomized_crops/*
+!sigma_data/atomized_crops/.gitkeep
+
+# 3. VECTOR DATABASE (The Archive)
+# This is a local database file. It will be rebuilt on deployment.
+sigma_data/chroma_db/
+chroma.sqlite3
+
+# 4. TEMP / TESTING
+test_images/
+temp/
+output/
+
+# ====================================
+#  DEVELOPMENT FILES
+# ====================================
+
+# Coverage reports
+.coverage
+htmlcov/
+
+# pytest cache
+.pytest_cache/
+
+# mypy cache
+.mypy_cache/
+
+# ruff cache
+.ruff_cache/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# ====================================
+#  EXCEPTIONS (WHAT WE KEEP)
+# ====================================
+
+# We MUST commit the Ground Truth JSONs (The Logic)
+!sigma_data/ground_truth/*.json
+!sigma_data/ground_truth/.gitkeep
+
+# Keep README and other documentation
+!README.md
+!CONTRIBUTING.md
+!CODE_OF_CONDUCT.md
+!LICENSE
+
+# Keep configuration files
+!pyproject.toml
+!requirements.txt
+!requirements-dev.txt
+!setup.py
+
+# Keep GitHub templates
+!.github/
+!.github/ISSUE_TEMPLATE/
+!.github/PULL_REQUEST_TEMPLATE.md

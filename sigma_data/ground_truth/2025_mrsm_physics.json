@@ -1,0 +1,210 @@
+{
+  "meta": {
+    "year": 2025,
+    "exam_type": "TRIAL",
+    "source": "MRSM",
+    "subject": "PHYSICS",
+    "paper": "2",
+    "language": "BILINGUAL (EN/MS)"
+  },
+  "questions": {
+    "Q5": {
+      "id": "2025_MRSM_P2_Q5",
+      "topic": "Forces and Motion II",
+      "sub_topic": "Resolution of Forces",
+      "difficulty": "Medium",
+      "visual_assets": [
+        {
+          "id": "img_5_1_5_2",
+          "description": "Two cows pulling a cart. Diagram 5.1 has F=2000N, Fr=800N, a=0.5. Diagram 5.2 has F=2000N, Fr=1200N, a=0.2.",
+          "filename": "2025_MRSM_Q5_COWS.jpg"
+        },
+        {
+          "id": "img_5_3",
+          "description": "Car parked on a sloped road.",
+          "filename": "2025_MRSM_Q5_CAR_SLOPE.jpg"
+        }
+      ],
+      "parts": [
+        {
+          "label": "a",
+          "text": "What is meant by resultant force?",
+          "marks": 1,
+          "answer_type": "Definition",
+          "solution": {
+            "key_phrase": "Single force representing vector sum",
+            "latex": null
+          }
+        },
+        {
+          "label": "b",
+          "text": "Compare frictional force (Fr) and acceleration (a) between Diagram 5.1 and 5.2.",
+          "marks": 2,
+          "answer_type": "Comparison",
+          "solution": {
+            "steps": [
+              { "logic": "Frictional Force: 5.1 < 5.2", "latex": "F_{r(5.1)} < F_{r(5.2)}" },
+              { "logic": "Acceleration: 5.1 > 5.2", "latex": "a_{(5.1)} > a_{(5.2)}" }
+            ]
+          }
+        },
+        {
+          "label": "d(ii)",
+          "text": "Sketch the triangle of forces for Weight (W), Normal Reaction (R), and Frictional Force (Fr) for the car on the slope.",
+          "marks": 2,
+          "answer_type": "Drawing",
+          "visual_solution": "triangle_forces_slope.jpg",
+          "solution": {
+            "notes": "Must be a closed triangle. Weight (W) acts vertically down. Normal (R) perpendicular to slope. Friction (Fr) parallel to slope upwards."
+          }
+        }
+      ],
+      "oracle_insight": "Common Mistake: Students often draw the Normal Reaction (R) vertically upwards on a slope. Remember: 'Normal' means Perpendicular (90°) to the surface."
+    },
+    "Q6": {
+      "id": "2025_MRSM_P2_Q6",
+      "topic": "Light and Optics",
+      "sub_topic": "Lenses",
+      "difficulty": "Hard",
+      "visual_assets": [
+        {
+          "id": "img_6_fingerprint",
+          "description": "Biometric fingerprint scanners with different convex lenses.",
+          "filename": "2025_MRSM_Q6_LENSES.jpg"
+        },
+        {
+          "id": "img_6_4",
+          "description": "Ray diagram for calculation.",
+          "filename": "2025_MRSM_Q6_RAY.jpg"
+        }
+      ],
+      "parts": [
+        {
+          "label": "b",
+          "text": "Compare radius of curvature, thickness, and focal length.",
+          "marks": 3,
+          "answer_type": "Comparison",
+          "solution": {
+            "steps": [
+              { "logic": "Radius: 6.2 > 6.3" },
+              { "logic": "Thickness: 6.2 < 6.3" },
+              { "logic": "Focal Length: 6.2 > 6.3" }
+            ]
+          }
+        },
+        {
+          "label": "d(i)",
+          "text": "Calculate the refracted angle, r, if incidence angle i is 30°. (n=1.50)",
+          "marks": 2,
+          "answer_type": "Calculation",
+          "solution": {
+            "steps": [
+              { "step": "Snell's Law", "latex": "n = \\frac{\\sin i}{\\sin r}" },
+              { "step": "Substitution", "latex": "1.50 = \\frac{\\sin 30^\\circ}{\\sin r}" },
+              { "step": "Rearrange", "latex": "\\sin r = \\frac{0.5}{1.50} = 0.333" },
+              { "step": "Final Answer", "latex": "r = 19.47^\\circ" }
+            ]
+          }
+        }
+      ],
+      "oracle_insight": "Physics Rule: A 'Thicker' lens is more powerful. It bends light more strongly, resulting in a *shorter* focal length."
+    },
+    "Q8": {
+      "id": "2025_MRSM_P2_Q8",
+      "topic": "Electronics",
+      "sub_topic": "Transistor Circuits",
+      "difficulty": "Medium",
+      "visual_assets": [
+        {
+          "id": "img_8_1",
+          "description": "Transistor circuit with LDR/Thermistor possibilities.",
+          "filename": "2025_MRSM_Q8_CIRCUIT.jpg"
+        }
+      ],
+      "parts": [
+        {
+          "label": "a",
+          "text": "What is the type of transistor X?",
+          "marks": 1,
+          "answer_type": "Definition",
+          "solution": {
+            "value": "NPN Transistor (Arrow points OUT - 'Not Pointing iN')"
+          }
+        },
+        {
+          "label": "c",
+          "text": "Modify the circuit to function as an automatic fire alarm.",
+          "marks": 6,
+          "answer_type": "Design/Essay",
+          "solution": {
+            "components": [
+              { "replace": "L1", "with": "Buzzer/Siren", "reason": "To produce sound warning." },
+              { "replace": "R1", "with": "Thermistor", "reason": "Resistance decreases when temperature rises (Fire)." }
+            ]
+          }
+        }
+      ],
+      "oracle_insight": "Circuit Hack: For automatic switching, look at the input sensor. Fire = Heat = Thermistor. Night = Dark = LDR (Light Dependent Resistor)."
+    },
+    "Q9": {
+      "id": "2025_MRSM_P2_Q9",
+      "topic": "Electricity",
+      "sub_topic": "National Grid & Transmission",
+      "difficulty": "Hard",
+      "visual_assets": [
+        {
+          "id": "img_9_3_table",
+          "description": "Table 3 showing characteristics of Electric Trains (K, L, M, N).",
+          "filename": "2025_MRSM_Q9_TABLE.jpg"
+        }
+      ],
+      "parts": [
+        {
+          "label": "d",
+          "text": "Select the most suitable electric train for long-distance travel based on Table 3.",
+          "marks": 10,
+          "answer_type": "Decision Making",
+          "solution": {
+            "choice": "Train M",
+            "justification": [
+              { "feature": "Diameter of Cable: Large", "reason": "Reduces Resistance ($R \\propto 1/A$)." },
+              { "feature": "Power Source: AC (High Voltage)", "reason": "Can be stepped down by transformer." },
+              { "feature": "Shape: Streamline", "reason": "Reduces Air Resistance (Aerodynamic)." },
+              { "feature": "Motor: Brushless", "reason": "Reduces friction and sparking." }
+            ]
+          }
+        }
+      ],
+      "oracle_insight": "Efficiency Logic: In transmission, Power Loss = $I^2 R$. To save energy, we must lower Current (I) or lower Resistance (R)."
+    },
+    "Q11": {
+      "id": "2025_MRSM_P2_Q11",
+      "topic": "Forces and Motion I",
+      "sub_topic": "Momentum & Impulse",
+      "difficulty": "Hard",
+      "visual_assets": [
+        {
+          "id": "img_11_4",
+          "description": "Steamroller compacting soil.",
+          "filename": "2025_MRSM_Q11_STEAMROLLER.jpg"
+        }
+      ],
+      "parts": [
+        {
+          "label": "d",
+          "text": "Suggest modifications to the steamroller to level the road quickly and efficiently.",
+          "marks": 10,
+          "answer_type": "Modification/Essay",
+          "solution": {
+            "modifications": [
+              { "feature": "Big/Heavy Drum", "reason": "High Mass = High Force/Pressure to compact soil." },
+              { "feature": "High Power Engine", "reason": "To move the heavy mass." },
+              { "feature": "Steel Material", "reason": "Durability and extra weight." }
+            ]
+          }
+        }
+      ],
+      "oracle_insight": "Pressure vs Force: A steamroller needs High Pressure ($P=F/A$). While wide tires reduce pressure (bad for compacting), a heavy drum increases Force (good for compacting)."
+    }
+  }
+}

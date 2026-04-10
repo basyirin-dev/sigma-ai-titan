@@ -1,0 +1,199 @@
+/* =========================================
+   SIGMA AI v3 // TITAN FINAL_FINAL STYLESHEET
+   ========================================= */
+
+/* --- 1. GLOBAL TYPOGRAPHY --- */
+html, body, .stApp, .stMarkdown, .stButton, .stTextInput, .stTextArea {
+    font-family: 'JetBrains Mono', monospace !important;
+}
+
+/* --- 2. THE VOID (BACKGROUND) --- */
+.stApp {
+    background-color: #0E1117;
+    background-image:
+        linear-gradient(rgba(14, 17, 23, 0.96), rgba(14, 17, 23, 0.96)),
+        linear-gradient(90deg, rgba(0, 255, 148, 0.03) 1px, transparent 1px),
+        linear-gradient(rgba(0, 255, 148, 0.03) 1px, transparent 1px);
+    background-size: 100% 100%, 40px 40px, 40px 40px;
+}
+
+/* --- 3. SCROLLBARS (BRUTE FORCE TARGETING) --- */
+/* Target EVERYTHING that scrolls */
+*::-webkit-scrollbar {
+    width: 12px !important;
+    height: 12px !important;
+}
+
+*::-webkit-scrollbar-track {
+    background: #0E1117 !important;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #2d3748 !important; /* GREY DEFAULT */
+    border-radius: 6px !important;
+    border: 3px solid #0E1117 !important; /* Creates padding effect */
+}
+
+/* The Hover Trigger */
+*::-webkit-scrollbar-thumb:hover {
+    background-color: #00FF94 !important; /* NEON GREEN ON HOVER */
+    border-color: #0E1117 !important;
+    box-shadow: 0 0 15px #00FF94 !important;
+}
+
+/* --- 4. HEADERS --- */
+h1, h2, h3 {
+    color: #00FF94 !important;
+    font-weight: 800 !important;
+    text-shadow: 0 0 20px rgba(0, 255, 148, 0.6);
+}
+p, li, label, .stCaption {
+    color: #b0b8c3 !important;
+}
+
+/* --- 5. INPUT FIELDS (COMPONENT TARGETING) --- */
+/* Target the input box wrapper directly by class */
+.stTextInput > div > div,
+.stTextArea > div > div {
+    background-color: #161b26 !important;
+    border: 1px solid #2d3748 !important;
+    border-radius: 6px !important;
+    transition: all 0.2s ease !important;
+}
+
+/* The GLOW - Triggered when you click inside */
+.stTextInput > div > div:focus-within,
+.stTextArea > div > div:focus-within {
+    border-color: #00FF94 !important;
+    box-shadow: 0 0 25px rgba(0, 255, 148, 0.5) !important; /* VISIBLE HAZE */
+    transform: translateY(-2px);
+}
+
+/* Text inside inputs */
+input, textarea {
+    color: #00FF94 !important;
+    caret-color: #00FF94 !important;
+}
+
+/* --- 6. BUTTONS --- */
+div.stButton > button {
+    background: #0E1117;
+    color: #00FF94;
+    border: 1px solid #00FF94;
+    font-weight: 700;
+}
+
+div.stButton > button:hover {
+    background: #00FF94 !important;
+    color: #000000 !important;
+    box-shadow: 0 0 20px #00FF94;
+}
+
+div.stButton > button:hover p {
+    color: #000000 !important;
+}
+
+/* --- 7. CHAT BUBBLES (MAXIMUM CONTRAST) --- */
+/* AI Assistant */
+[data-testid="stChatMessage"]:nth-child(even) {
+    background-color: #131d2b !important;
+    border-left: 5px solid #00FF94 !important;
+    border-radius: 4px 12px 12px 4px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); /* Lifted effect */
+    margin-bottom: 10px;
+}
+
+/* User */
+[data-testid="stChatMessage"]:nth-child(odd) {
+    background-color: #000000 !important; /* Pitch black */
+    border: 1px solid #333 !important;
+    border-radius: 12px 4px 4px 12px;
+    margin-bottom: 10px;
+}
+
+/* --- 8. THINKING LOG --- */
+[data-testid="stStatusWidget"] {
+    background-color: #0d1117;
+    border: 1px solid #2d3748;
+    border-left: 4px solid #00FF94;
+}
+[data-testid="stStatusWidget"] header {
+    color: #00FF94 !important;
+}
+
+/* --- 10. HIDE BLOAT (CORRECTED) --- */
+#MainMenu {
+    visibility: hidden; /* Hides the 'Three Dots' menu */
+}
+
+footer {
+    visibility: hidden; /* Hides 'Made with Streamlit' */
+}
+
+/* CRITICAL FIX: We must keep the header visible to see the Sidebar Toggle */
+header {
+    visibility: visible !important;
+    background-color: transparent !important; /* Blends with the background */
+}
+
+/* Optional: Hide the specific 'Deploy' button if it appears */
+.stDeployButton {
+    display: none;
+}
+
+/* --- 11. ANIMATIONS (HEARTBEAT) --- */
+@keyframes titan-pulse {
+    0% {
+        opacity: 1;
+        text-shadow: 0 0 10px rgba(0, 255, 148, 0.4);
+    }
+    50% {
+        opacity: 0.3;
+        text-shadow: 0 0 0px rgba(0, 255, 148, 0);
+    }
+    100% {
+        opacity: 1;
+        text-shadow: 0 0 10px rgba(0, 255, 148, 0.4);
+    }
+}
+
+/* 1. TARGET THE HEADER CONTAINER */
+/* We look for the first div inside the widget. This is ALWAYS the header. */
+div[data-testid="stStatusWidget"] > div:first-child {
+    border-bottom: 1px solid rgba(0, 255, 148, 0.2); /* Subtle separator */
+}
+
+/* 2. TARGET THE TEXT INSIDE THE HEADER */
+/* We search for ANY paragraph 'p' inside that first div. */
+div[data-testid="stStatusWidget"] > div:first-child p {
+    animation: titan-pulse 1.5s infinite ease-in-out !important;
+    color: #00FF94 !important;
+    font-weight: 800 !important;
+}
+
+/* 3. TARGET THE SPINNER / CHECKMARK */
+/* We search for ANY svg inside that first div. */
+div[data-testid="stStatusWidget"] > div:first-child svg {
+    animation: titan-pulse 1.5s infinite ease-in-out !important;
+    fill: #00FF94 !important;
+}
+
+/* --- 12. ERROR STATE --- */
+
+/* The Error Box */
+div[data-baseweb="notification"][class*="st-ae"] {
+    background-color: rgba(255, 0, 80, 0.1) !important;
+    border: 1px solid #ff0050 !important;
+    color: #ff0050 !important;
+    border-radius: 4px;
+}
+
+/* The Error Icon */
+div[data-baseweb="notification"] svg {
+    fill: #ff0050 !important;
+}
+
+/* The Status Widget in Error Mode */
+[data-testid="stStatusWidget"][class*="error"] {
+    border-left-color: #ff0050 !important;
+}

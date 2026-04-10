@@ -1,0 +1,22 @@
+# --- CORE INTERFACE ---
+streamlit>=1.52.0
+watchdog>=6.0.0
+
+# --- TITAN INTELLIGENCE (Gemini 1.5/3.0) ---
+# The new SDK for Gemini
+google-genai>=1.0.0
+
+# --- THE ARCHIVE (Vector Database) ---
+# Required for Phase V & VI (RAG/Search)
+chromadb>=0.6.0
+pysqlite3-binary; sys_platform == 'linux'  # Fixes ChromaDB on some cloud servers
+
+# --- VISUAL CORTEX (PDF & Image Processing) ---
+pdf2image>=1.17.0
+pypdf>=5.0.0
+pillow>=12.0.0
+
+# --- UTILITIES ---
+python-dotenv>=1.0.0
+pandas>=2.2.0
+numpy>=2.0.0

@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Questions & Discussions
+    url: https://github.com/your-username/sigma-ai/discussions
+    about: Please use GitHub Discussions for questions and community discussions
+  - name: Security Vulnerabilities
+    url: mailto:basyirin.amsyar@example.com
+    about: Please report security vulnerabilities directly via email
