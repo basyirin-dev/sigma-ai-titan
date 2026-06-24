@@ -1,10 +1,12 @@
+# --- CONFIGURATION ---
+import os
 import re
+from typing import Any
 
 from pdf2image import convert_from_bytes
 from PIL import Image
 
-# --- CONFIGURATION ---
-import os
+from src.config.settings import is_mock_mode
 
 # Poppler path - set via environment variable for cross-platform compatibility
 POPPLER_PATH = os.getenv("POPPLER_PATH", None)
@@ -14,7 +16,7 @@ MAX_IMAGE_SIZE = int(os.getenv("MAX_IMAGE_SIZE", "1024"))
 PDF_DPI = int(os.getenv("PDF_DPI", "200"))
 
 
-def process_image(image_input):
+def process_image(image_input: Any) -> tuple[Any, str]:
     """
     The Airlock: Sanitizes and optimizes user images.
 
@@ -72,7 +74,7 @@ def process_image(image_input):
         return None, str(e)
 
 
-def convert_pdf_to_image(pdf_bytes):
+def convert_pdf_to_image(pdf_bytes: bytes) -> tuple[Any, str]:
     """
     Converts the first page of a PDF into a PIL Image.
 
@@ -118,3 +120,43 @@ def sanitize_latex(text: str) -> str:
     # Add newlines around block math
     text = text.replace("$$", "\n$$\n")
     return re.sub(r"\n{3,}", "\n\n", text).strip()
+
+
+# ---------------------------------------------------------------------------
+#  MOCK-MODE STUBS — replaced by real implementations in Phase 2+
+# ---------------------------------------------------------------------------
+
+
+def gemini_generate_content(prompt: str) -> str:
+    if not is_mock_mode():
+        raise NotImplementedError("Real AI router not yet implemented")
+    return f"[Mock response] Received prompt ({len(prompt)} chars). Real AI routing coming in Phase 2."
+
+
+def save_uploaded_file(uploaded_file: Any) -> str:
+    if not is_mock_mode():
+        raise NotImplementedError("Real AI router not yet implemented")
+    import tempfile
+
+    with tempfile.NamedTemporaryFile(delete=False, suffix=uploaded_file.name) as tmp:
+        tmp.write(uploaded_file.getvalue())
+        return tmp.name
+
+
+def process_pdf_to_images(file_path: str) -> list:
+    if not is_mock_mode():
+        raise NotImplementedError("Real AI router not yet implemented")
+    from PIL import Image
+
+    return [Image.new("RGB", (100, 100), color="white")]
+
+
+def load_vector_store() -> None:
+    if not is_mock_mode():
+        raise NotImplementedError("Real vector store not yet implemented")
+
+
+def search_similar_problems(query: str, top_k: int = 5) -> list:
+    if not is_mock_mode():
+        raise NotImplementedError("Real vector search not yet implemented")
+    return []

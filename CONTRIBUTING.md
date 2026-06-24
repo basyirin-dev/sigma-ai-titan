@@ -30,12 +30,12 @@ This project adheres to a code of conduct. By participating, you are expected to
 ### Fork the Repository
 
 1. Fork the repository on GitHub
-2. Clone your fork locally:
+1. Clone your fork locally:
    ```bash
    git clone https://github.com/your-username/sigma-ai.git
    cd sigma-ai
    ```
-3. Add the upstream repository:
+1. Add the upstream repository:
    ```bash
    git remote add upstream https://github.com/your-username/sigma-ai.git
    ```
@@ -45,22 +45,22 @@ This project adheres to a code of conduct. By participating, you are expected to
 ### Ways to Contribute
 
 1. **Bug Reports**: Report bugs by creating issues
-2. **Feature Requests**: Suggest new features or improvements
-3. **Code Contributions**: Fix bugs or implement new features
-4. **Documentation**: Improve documentation and tutorials
-5. **Testing**: Write tests and improve test coverage
-6. **Community**: Help other users and contributors
+1. **Feature Requests**: Suggest new features or improvements
+1. **Code Contributions**: Fix bugs or implement new features
+1. **Documentation**: Improve documentation and tutorials
+1. **Testing**: Write tests and improve test coverage
+1. **Community**: Help other users and contributors
 
 ### Contribution Workflow
 
 1. Find an issue or create one
-2. Comment on the issue to let others know you're working on it
-3. Fork the repository and create a feature branch
-4. Make your changes
-5. Test your changes thoroughly
-6. Submit a pull request
-7. Address review feedback
-8. Celebrate your contribution! 🎉
+1. Comment on the issue to let others know you're working on it
+1. Fork the repository and create a feature branch
+1. Make your changes
+1. Test your changes thoroughly
+1. Submit a pull request
+1. Address review feedback
+1. Celebrate your contribution! 🎉
 
 ## 🔧 Development Setup
 
@@ -83,8 +83,9 @@ pip install -r requirements-dev.txt  # For development
 ### Environment Variables
 
 Create a `.env` file:
+
 ```bash
-GOOGLE_API_KEY=your_api_key_here
+GOOGLE_API_KEY=YOUR_API_KEY_HERE
 ```
 
 ### Run the Application
@@ -106,6 +107,7 @@ streamlit run app.py
 ### Code Formatting
 
 Before submitting code, run:
+
 ```bash
 # Format code
 black .
@@ -120,6 +122,7 @@ mypy .
 ### Commit Messages
 
 Use descriptive commit messages following this format:
+
 ```
 <type>: <short description>
 
@@ -129,6 +132,7 @@ Use descriptive commit messages following this format:
 ```
 
 Types:
+
 - `feat`: New feature
 - `fix`: Bug fix
 - `docs`: Documentation changes
@@ -138,6 +142,7 @@ Types:
 - `chore`: Maintenance tasks
 
 Example:
+
 ```
 feat: add PDF processing support
 
@@ -150,6 +155,7 @@ Fixes #42
 ### File Structure
 
 Follow the existing project structure:
+
 ```
 sigma-ai/
 ├── app.py                 # Main application
@@ -165,21 +171,25 @@ sigma-ai/
 ### Creating a Pull Request
 
 1. **Branch Naming**:
+
    - Use descriptive names: `feature/add-pdf-support`, `fix/login-bug`
    - Prefix with type: `feature/`, `fix/`, `docs/`, `refactor/`
 
-2. **Commit History**:
+1. **Commit History**:
+
    - Squash related commits
    - Rebase on main branch before submitting
    - Keep commit history clean
 
-3. **PR Description**:
+1. **PR Description**:
+
    - Include clear title and description
    - Reference related issues
    - Describe testing performed
    - Include screenshots for UI changes
 
-4. **Testing**:
+1. **Testing**:
+
    - Ensure all tests pass
    - Add new tests for new features
    - Test edge cases
@@ -187,16 +197,19 @@ sigma-ai/
 ### Review Process
 
 1. **Automated Checks**:
+
    - CI/CD pipeline must pass
    - Code coverage requirements met
    - No security vulnerabilities
 
-2. **Code Review**:
+1. **Code Review**:
+
    - At least one maintainer approval required
    - Address all review comments
    - Be responsive to feedback
 
-3. **Merge**:
+1. **Merge**:
+
    - Squash and merge for feature branches
    - Rebase and merge for bug fixes
    - Update documentation if needed
@@ -210,6 +223,7 @@ Use the bug report template when creating issues:
 **Title**: Clear, descriptive title
 
 **Description**:
+
 - Steps to reproduce
 - Expected behavior
 - Actual behavior
@@ -228,8 +242,8 @@ For security vulnerabilities, please email [basyirin.amsyar@example.com](mailto:
 ### Suggesting Features
 
 1. **Check Existing Issues**: Search for similar features
-2. **Use Feature Template**: Fill out the feature request template
-3. **Provide Details**:
+1. **Use Feature Template**: Fill out the feature request template
+1. **Provide Details**:
    - Problem statement
    - Proposed solution
    - Use cases
@@ -271,6 +285,7 @@ For security vulnerabilities, please email [basyirin.amsyar@example.com](mailto:
 ### Writing Documentation
 
 1. **Function Docstrings**:
+
 ```python
 def process_image(image_input):
     """
@@ -295,7 +310,7 @@ def process_image(image_input):
 
 2. **Module Docstrings**: Include overview and important classes/functions
 
-3. **Inline Comments**: Explain complex logic, not obvious operations
+1. **Inline Comments**: Explain complex logic, not obvious operations
 
 ## 🧪 Testing
 
@@ -340,25 +355,25 @@ python -m pytest -v
 ### For Reviewers
 
 1. **Be Respectful**: Provide constructive feedback
-2. **Be Thorough**: Review all changes
-3. **Be Helpful**: Suggest improvements
-4. **Be Timely**: Respond within 2-3 days
+1. **Be Thorough**: Review all changes
+1. **Be Helpful**: Suggest improvements
+1. **Be Timely**: Respond within 2-3 days
 
 ### For Contributors
 
 1. **Be Open**: Accept feedback gracefully
-2. **Be Responsive**: Address comments promptly
-3. **Be Patient**: Review takes time
-4. **Be Clear**: Explain your reasoning
+1. **Be Responsive**: Address comments promptly
+1. **Be Patient**: Review takes time
+1. **Be Clear**: Explain your reasoning
 
 ## 🚢 Deployment
 
 ### Release Process
 
 1. **Versioning**: Follow Semantic Versioning (MAJOR.MINOR.PATCH)
-2. **Changelog**: Update CHANGELOG.md for each release
-3. **Git Tag**: Create annotated tag for release
-4. **GitHub Release**: Create GitHub release with notes
+1. **Changelog**: Update CHANGELOG.md for each release
+1. **Git Tag**: Create annotated tag for release
+1. **GitHub Release**: Create GitHub release with notes
 
 ### Release Checklist
 
@@ -380,13 +395,14 @@ python -m pytest -v
 ### Getting Help
 
 1. **Search First**: Check existing issues and discussions
-2. **Be Specific**: Include all relevant details
-3. **Be Patient**: Community members volunteer their time
-4. **Be Grateful**: Thank those who help you
+1. **Be Specific**: Include all relevant details
+1. **Be Patient**: Community members volunteer their time
+1. **Be Grateful**: Thank those who help you
 
 ### Recognition
 
 Contributors will be recognized in:
+
 - Release notes
 - Contributors list in README.md
 - GitHub Contributors page
@@ -399,6 +415,6 @@ By contributing, you agree that your contributions will be licensed under the MI
 
 Thank you for taking the time to contribute to SIGMA AI. Your efforts help make mathematics education more accessible and personalized for students worldwide.
 
----
+______________________________________________________________________
 
 **Happy Contributing! 🚀**

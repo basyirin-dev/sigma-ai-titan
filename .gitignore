@@ -55,6 +55,28 @@ temp/
 output/
 
 # ====================================
+#  OPENCODE / IDE CONFIG
+# ====================================
+
+# OpenCode personal config (contains local paths)
+opencode.json
+.opencode/
+
+# ====================================
+#  INTERNAL DOCUMENTATION
+# ====================================
+
+# Internal planning docs — not pushed to remote
+docs/
+
+# ====================================
+#  DATA STORES
+# ====================================
+
+# Runtime data (cache, ChromaDB, cost logs)
+data/
+
+# ====================================
 #  DEVELOPMENT FILES
 # ====================================
 
@@ -67,9 +89,6 @@ htmlcov/
 
 # mypy cache
 .mypy_cache/
-
-# ruff cache
-.ruff_cache/
 
 # Jupyter Notebook checkpoints
 .ipynb_checkpoints/

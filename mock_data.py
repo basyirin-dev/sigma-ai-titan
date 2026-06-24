@@ -102,30 +102,6 @@ Here is a test of the rendering engine:
 $$ f(x) = \sum_{n=0}^{\infty} \frac{f^{(n)}(a)}{n!} (x-a)^n $$
 """
 
-# --- UX: THOUGHT CHAINS ---
-THOUGHT_CHAINS = {
-    "calculus": [
-        "Identifying integration bounds...",
-        "Applying LIATE rule for Integration by Parts...",
-        "Computing definite integral...",
-        "Verifying singularity points...",
-        "Formatting LaTeX output...",
-    ],
-    "geometry": [
-        "Vectorizing diagram...",
-        "Detecting geometric primitives (Triangle, Circle)...",
-        "Applying Sine/Cosine Rules...",
-        "Checking for ambiguous cases...",
-        "Rendering final proof...",
-    ],
-    "general": [
-        "Ingesting multimodal data...",
-        "Tokenizing input stream...",
-        "Accessing Knowledge Graph...",
-        "Synthesizing response...",
-    ],
-}
-
 # --- COGNITIVE PATHWAYS ---
 # These simulate the internal steps of the Gemini Thinking Model.
 THOUGHT_CHAINS = {
@@ -166,7 +142,6 @@ THOUGHT_CHAINS = {
         "Synthesizing response...",
         "rendering_latex",
     ],
-    # Add this to THOUGHT_CHAINS dictionary
     "failure_test": [
         "Establishing secure handshake...",
         "Uploading payload to neural engine...",

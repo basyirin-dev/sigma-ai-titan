@@ -1,19 +1,22 @@
 import json
+from typing import Any
 
 
 # --- LOADER ---
-def load_test_cases():
+def load_test_cases() -> dict[str, Any]:
     """Loads the Golden Artifacts from JSON."""
     try:
-        with open("test_cases.json", "r") as f:
-            return json.load(f)
+        with open("test_cases.json") as f:
+            return json.load(f)  # type: ignore[no-any-return]
     except Exception as e:
         print(f"CRITICAL ERROR: Could not load test_cases.json - {e}")
         return {}
 
 
 # --- INTELLIGENCE ROUTER ---
-def get_smart_response(user_prompt, uploaded_file_name):
+def get_smart_response(
+    user_prompt: str, uploaded_file_name: str | None
+) -> tuple[str, str]:
     """
     Metadata Trigger Logic.
     Returns: (Response Text, Scenario Key)

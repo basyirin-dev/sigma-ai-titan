@@ -1,74 +1,23 @@
 # Changelog
 
-All notable changes to SIGMA AI will be documented in this file.
-
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
-and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
-
-## [Unreleased]
+## [Unreleased] — Initial Project Setup
 
 ### Added
-- Initial project setup and configuration
-- Streamlit-based web interface
-- Google Gemini AI integration
-- PDF and image processing capabilities
-- Multi-page application structure (Solver, Archive, Oracle)
-- Vector database integration with ChromaDB
 
-### Changed
-- Updated project name from "sigma-ai-v3" to "SIGMA AI"
-- Improved configuration management with environment variables
-- Enhanced documentation structure
+- **Project scaffold**: Streamlit multipage app with dashboard, 3 modules (Solver, Archive, Oracle)
+- **Dark theme CSS**: Custom "The Void" aesthetic with neon-green accent, JetBrains Mono font
+- **Sigma Protocol**: System prompt defining Analysis → First Principles → Solution → Final Answer reasoning
+- **Ground truth data**: MRSM Physics 2025 trial paper (5 questions with solutions and oracle insights)
+- **Mock infrastructure**: `mock_data.py` (thought chains + responses), `mock_logic.py` (keyword routing), `test_cases.json` (8 scenarios)
+- **Utility functions**: `process_image()`, `convert_pdf_to_image()`, `sanitize_latex()` in `utils.py`
 
-### Fixed
-- Hardcoded paths in utils.py now use environment variables
-- Cross-platform compatibility improvements
+### Technical Debt
 
-### Deprecated
-- N/A
-
-### Removed
-- N/A
-
-### Security
-- Added comprehensive .gitignore for security
-- Environment variable-based configuration for sensitive data
-
-## [0.1.0] - 2024-12-19
-
-### Added
-- Initial release of SIGMA AI
-- Core functionality for mathematics problem solving
-- Multimodal input support (text, images, PDFs)
-- Adaptive learning engine
-- Real-time diagnostic feedback
-- Streamlit web interface
-- Google Generative AI integration
-- ChromaDB vector database
-- PDF processing capabilities
-- Custom CSS styling
-- Modular page architecture
-
-### Known Issues
-- Phase V & VI features (RAG/Search) not yet implemented
-- Some features marked as "OFFLINE" in dashboard
-
----
-
-## Versioning Strategy
-
-- **Major version (X.0.0)**: Breaking changes, major feature additions
-- **Minor version (0.X.0)**: New features, backward compatible
-- **Patch version (0.0.X)**: Bug fixes, performance improvements
-
-## Release Process
-
-1. Update version in `pyproject.toml`
-2. Update CHANGELOG.md with new version
-3. Create git tag: `git tag -a vX.Y.Z -m "Release vX.Y.Z"`
-4. Push tag: `git push origin vX.Y.Z`
-5. Create GitHub release with release notes
-
-## Contributing
-
-See [CONTRIBUTING.md](CONTRIBUTING.md) for how to contribute to this project.
+- Page files (`1_⚡_Titan_Solver.py`, `2_📂_The_Archive.py`, `3_🧠_The_Oracle.py`) import 5 functions from `utils.py` that do not exist
+- `src/core/model.py` is an empty stub
+- `THOUGHT_CHAINS` defined twice in `mock_data.py` (second overwrites first)
+- No real AI integration — all responses are mocked
+- No vector database integration — Archive page is non-functional
+- No tests exist
+- No Docker or CI/CD configuration
+- CLI entry point `sigma_ai.cli:main` does not exist
