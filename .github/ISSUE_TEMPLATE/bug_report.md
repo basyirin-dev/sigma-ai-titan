@@ -1,41 +1,67 @@
 ---
 name: Bug Report
-about: Create a report to help us improve SIGMA AI
+about: Report a bug to help improve SIGMA AI
 title: "[BUG] "
 labels: bug
 assignees: ''
-
 ---
 
-**Describe the bug**
+## SPM Topic
+
+<!-- e.g., Quadratic Functions, Trigonometry, Vectors, Differentiation -->
+
+**Topic/Subtopic:**
+
+## Problem Type
+
+- [ ] Calculation error (wrong answer)
+- [ ] App crash or freeze
+- [ ] Wrong explanation or reasoning
+- [ ] UI/display issue
+- [ ] LaTeX rendering issue
+- [ ] Upload/processing issue (image/PDF)
+- [ ] Other
+
+## Describe the Bug
+
 A clear and concise description of what the bug is.
 
-**To Reproduce**
-Steps to reproduce the behavior:
+## Input Problem
+
+<!-- Paste the actual math problem you were solving -->
+
+```
+
+```
+
+## Expected Behavior
+
+What did you expect to happen?
+
+## Actual Behavior
+
+What actually happened? Include error messages if applicable.
+
+## To Reproduce
+
+Steps to reproduce:
+
 1. Go to '...'
-2. Click on '....'
-3. Scroll down to '....'
-4. See error
+1. Select model '...'
+1. Enter problem '...'
+1. See error
 
-**Expected behavior**
-A clear and concise description of what you expected to happen.
+## Screenshots / Logs
 
-**Screenshots**
-If applicable, add screenshots to help explain your problem.
+If applicable, add screenshots or console logs.
 
-**Desktop (please complete the following information):**
- - OS: [e.g. Windows, macOS, Linux]
- - Browser [e.g. Chrome, Firefox, Safari]
- - Version [e.g. 22]
+## Environment
 
-**Smartphone (please complete the following information):**
- - Device: [e.g. iPhone6]
- - OS: [e.g. iOS8.1]
- - Browser [e.g. stock browser, safari]
- - Version [e.g. 22]
+- **OS:** [e.g., Windows 11, macOS 14, Android 14]
+- **Browser:** [e.g., Chrome 125, Safari 17]
+- **Device:** [e.g., Desktop, iPhone 13, Samsung Galaxy S24]
+- **Streamlit Version:** (visible in bottom-right corner)
 
-**Additional context**
-Add any other context about the problem here.
+## Additional Context
 
-**Possible Solution**
-If you have an idea for a fix, please describe it here.
+Anything else relevant to this bug.

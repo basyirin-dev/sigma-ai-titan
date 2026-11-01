@@ -76,8 +76,8 @@ Community Impact Guidelines were inspired by [Mozilla's code of conduct enforcem
 
 For answers to common questions about this code of conduct, see the FAQ at [https://www.contributor-covenant.org/faq][faq]. Translations are available at [https://www.contributor-covenant.org/translations][translations].
 
-[homepage]: https://www.contributor-covenant.org
-[v2.1]: https://www.contributor-covenant.org/version/2/1/code_of_conduct.html
-[mozilla-coc]: https://github.com/mozilla/coc-blurbs/blob/main/CODE_OF_CONDUCT.md
 [faq]: https://www.contributor-covenant.org/faq
+[homepage]: https://www.contributor-covenant.org
+[mozilla-coc]: https://github.com/mozilla/coc-blurbs/blob/main/CODE_OF_CONDUCT.md
 [translations]: https://www.contributor-covenant.org/translations
+[v2.1]: https://www.contributor-covenant.org/version/2/1/code_of_conduct.html

@@ -1,15 +1,12 @@
-.PHONY: install install-dev lint format typecheck test test-eval clean build all
+.PHONY: install lint format typecheck test test-eval clean build all
 
 # --- Python ---
 PYTHON := python3
-PIP := pip
+UV_PIP := uv pip
 VENV := .venv
 
 install:
-	$(PIP) install -e .
-
-install-dev:
-	$(PIP) install -e ".[dev]"
+	$(UV_PIP) install -e ".[dev]"
 
 lint:
 	ruff check .

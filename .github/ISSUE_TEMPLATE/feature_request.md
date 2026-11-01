@@ -4,29 +4,37 @@ about: Suggest an idea for SIGMA AI
 title: "[FEATURE] "
 labels: enhancement
 assignees: ''
-
 ---
 
-**Is your feature request related to a problem? Please describe.**
-A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
+## SPM Topic
 
-**Describe the solution you'd like**
-A clear and concise description of what you want to happen.
+<!-- Which SPM subject/topic does this feature relate to? (leave blank if general) -->
 
-**Describe alternatives you've considered**
-A clear and concise description of any alternative solutions or features you've considered.
+**Subject/Topic:**
 
-**Use case**
-How would this feature be used? Who would benefit from it?
+## Use Case
 
-**Additional context**
-Add any other context or screenshots about the feature request here.
+Describe the scenario where this feature would be used. What is the user trying to accomplish?
 
-**Priority**
-- [ ] Low - Nice to have
-- [ ] Medium - Important feature
-- [ ] High - Critical feature
-- [ ] Blocker - Must have for next release
+## Proposed Solution
 
-**Implementation Ideas**
-If you have ideas about how to implement this feature, please share them here.
+A clear description of what you want to happen. Be specific about the interface, behaviour, or output.
+
+## Alternatives Considered
+
+What other approaches have you considered? Why isn't the current workaround sufficient?
+
+## Student Impact
+
+- **How many students would this help?** [e.g., All SPM takers, Form 4 Add Math students, Physics students only]
+- **Exam relevance:** [e.g., Directly tested in Paper 2, Foundational concept, Nice-to-have]
+
+## Priority
+
+- [ ] High — Essential for core learning outcomes
+- [ ] Medium — Important improvement
+- [ ] Low — Nice to have
+
+## Implementation Ideas
+
+Any thoughts on how this could be built? (optional)

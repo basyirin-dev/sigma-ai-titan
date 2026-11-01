@@ -1,0 +1,11 @@
+# Default owner for all files
+* @your-username
+
+# Core business logic
+/src/ @your-username
+
+# Streamlit pages
+/pages/ @your-username
+
+# Documentation and phase planning
+/docs/ @your-username
